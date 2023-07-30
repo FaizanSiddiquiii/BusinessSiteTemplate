@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(34, 34, 34);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+form h3{
+    color: black;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form p{
+    color: black;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background-color: rgb(185, 183, 183);
+    font-size: 15px;
+}
+form button{
+    padding: 15px;
+    background: transparent;
+    color: black;
+    font-size: 18px;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+form button:hover{
+    background: grey;
+    color: white;
+    border: 1px solid grey;
+    transition: .5s ease;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get In Touch with Us | NexGenIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/f122a0af0b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <section class="contact-container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <p>Elevate your business with us! Contact us for consultation and you will here from us in one business day</p>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email ID" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="How Can we Help You"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "nexgenorg.info@gmail.com",
+            Password : "",
+            To : 'nexgenorg.info@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Enquiry",
+            Body : "Name:" + document.getElementById("name").value
+                    + "<br> Email:" + document.getElementById("email").value
+                    + "<br> Phone No:" + document.getElementById("phone").value
+                    + "<br> Message:" + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Successfully!")
+        );
+        }
+    </script>
+</body>
+</html>
